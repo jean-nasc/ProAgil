@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +32,8 @@ namespace ProAgil.API
 
             //Toda vez que precisar de IProAgilRepository, vou injetar o ProAgilRepository(é a classe de repositório)
             services.AddScoped<IProAgilRepository, ProAgilRepository>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddControllers();
 
