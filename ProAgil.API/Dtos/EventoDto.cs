@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -12,7 +13,7 @@ namespace ProAgil.API.Dtos
         public string Local { get; set; }
 
         [Required(ErrorMessage="O campo {0} é obrigatório.")]
-        public string DataEvento { get; set; }
+        public DateTime DataEvento { get; set; }
 
         [Required(ErrorMessage="O campo {0} é obrigatório.")]
         [StringLength(100, MinimumLength=3)]

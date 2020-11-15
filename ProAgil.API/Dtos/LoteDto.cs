@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProAgil.API.Dtos
@@ -14,10 +15,10 @@ namespace ProAgil.API.Dtos
         public decimal Preco { get; set; }
 
         [Required(ErrorMessage="O campo {0} é obrigatório.")]
-        public string DataInicio { get; set; }
+        public DateTime DataInicio { get; set; }
 
         [Required(ErrorMessage="O campo {0} é obrigatório.")]
-        public string DataFim { get; set; }
+        public DateTime DataFim { get; set; }
 
         [Required(ErrorMessage="O campo {0} é obrigatório.")]
         [Range(2, 120000, ErrorMessage="O campo {0} deve ter entre 2 e 120000.")]
